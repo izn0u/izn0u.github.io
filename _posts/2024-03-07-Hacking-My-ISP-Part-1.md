@@ -6,21 +6,21 @@ While gathering subdomains of redacted.com, one caught my attention: `sim-manage
 
 I started directory brute-forcing using dirsearch while proxying it to Burp Suite to analyze the results using different methods like POST, PUT, etc. One directory, `/cs/`, caught my attention as it returned a content length different from the other 404 pages. (If I hadn't proxied dirsearch traffic to Burp Suite, I wouldn't have noticed this.)
 
-![404-cs](../images/404-cs.png)
+![404-cs](404-cs.png)
 
 Subsequently, I began brute-forcing this directory and encountered an error with `/cs/SimSwap`.
 
-![soap-error](../images/soap-error.png)
+![soap-error](soap-error.png)
 
 Being familiar with SOAP API, I knew that adding `?wsdl` would resolve this error.
 
-![simswap-1](../images/simswap-1.png)
+![simswap-1](simswap-1.png)
 
 I utilized Burp Suite's [WSDler](https://portswigger.net/bappstore/594a49bb233748f2bc80a9eb18a2e08f) extension to parse the above request.
 
 By sending this request with the correct data, I was able to perform a SIM swap. Notably, no authentication was required for this request.
 
-![simswap-2](../images/simswap-2.png)
+![simswap-2](simswap-2.png)
 
 Kudos to them for promptly fixing this bug within 2 hours of my report.
 
