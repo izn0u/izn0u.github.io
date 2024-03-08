@@ -6,7 +6,7 @@ While gathering subdomains of redacted.com, one caught my attention: `sim-manage
 
 I started directory brute-forcing using dirsearch while proxying it to Burp Suite to analyze the results using different methods like POST, PUT, etc. One directory, `/cs/`, caught my attention as it returned a content length different from the other 404 pages. (If I hadn't proxied dirsearch traffic to Burp Suite, I wouldn't have noticed this.)
 
-![404-cs](404-cs.png)
+![404-cs](https://github.com/izn0u/izn0u.github.io/blob/main/_posts/404-cs.png)
 
 Subsequently, I began brute-forcing this directory and encountered an error with `/cs/SimSwap`.
 
