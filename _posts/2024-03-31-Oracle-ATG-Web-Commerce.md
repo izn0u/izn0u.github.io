@@ -1,4 +1,4 @@
-# Pentesting Oracle ATG Web Commerce
+# Oracle ATG Web Commerce
 
 This blog post aims to compile vulnerabilities identified during an investigation into a target utilizing Oracle Web Commerce (Oracle ATG).
  I will keep updating as i have some CVE pending.
